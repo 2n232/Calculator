@@ -17,10 +17,12 @@ const zero = document.querySelector('#zero');
 const point = document.querySelector('#point');
 
 const clear = document.querySelector('#clear');
+const allClear = document.querySelector('#allClear');
 
 let operationFinished = false; // Show id the operation ends.
 
-clear.addEventListener('click', clearDates);
+allClear.addEventListener('click', clearAllDates);
+clear.addEventListener('click', clearLastInput);
 
 one.addEventListener('click', enterValue);
 two.addEventListener('click', enterValue);
@@ -41,7 +43,7 @@ sum.addEventListener('click', operate);
 equal.addEventListener('click', operate);
 
 
-function clearDates() {
+function clearAllDates() {
     result.textContent = '';
 }
 
@@ -53,15 +55,14 @@ function enterValue(e) {
     result.textContent += e.target.textContent;
 }
 
-// variable with all valid numerals
-let numerals = '0123456789'
+// this function loads the values and the operator in an array and calls the operation function
 function operate(e) {
     let valors = result.textContent.split(' ');
-    console.log(valors);
     if(e.target.textContent === '='){
         operationFinished = true;
         result.textContent = operation(valors);
     } else {
+        operationFinished = false;
         result.textContent = operation(valors);
         result.textContent += e.target.textContent;
     }  
@@ -89,4 +90,13 @@ function enterPoint(e) {
 
 function removeResult(){
     result.textContent = "";
+}
+
+function clearLastInput() {
+    let displayed = result.textContent
+    let lastIndex = displayed.length-1; 
+    // the operators have one space before and one space after
+    if(displayed[lastIndex] === ' ') lastIndex -=2;
+    displayed = displayed.substring(0 , lastIndex);
+    result.textContent = displayed;
 }

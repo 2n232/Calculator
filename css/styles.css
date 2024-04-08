@@ -8,7 +8,7 @@ body {
 
 .content {
   width: 620px;
-  height: 820px;
+  height: 850px;
   background-color: aquamarine;
   border: 5px solid rgb(1,59,40);
   border-radius: 20px;
@@ -87,25 +87,33 @@ body {
   box-sizing: border-box;
   padding: 10px;
   margin: 10px;
+  color: white;
+  font-size: 64px;
+  font-weight: bold;
 }
 
 .row {
   display: flex;
 }
 
-#clear {
+#allClear, #clear {
     background-color: red;
     border: 10px  ridge rgb(83, 1, 1);
 }
 
 #equal {
-    width: 550px;
+    width: 260px;
     border: 10px ridge rgb(1, 59, 1);
-    height: 80px;
+    height: 120px;
     border-radius: 20px;
     padding: 0;
 }
 
 .pointIsHere {
   opacity: 0.5;
+}
+
+#zero {
+  width: 260px;
+  height: 120px;
 }
