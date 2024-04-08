@@ -1,0 +1,111 @@
+body {
+  display: flex;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 40px;
+}
+
+.content {
+  width: 620px;
+  height: 820px;
+  background-color: aquamarine;
+  border: 5px solid rgb(1,59,40);
+  border-radius: 20px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  box-sizing: border-box;
+  padding: 30px;
+}
+
+#result {
+  display: flex;
+  justify-content: flex-end;
+  width: 550px;
+  height: 100px;
+  border: 5px solid black;
+  border-radius: 15px;
+  background-color: white;
+  font-size: 64px;
+  box-sizing: border-box;
+  padding: 8px 10px;
+}
+
+.number-operators {
+  display: flex;
+  width: 570px;
+  height: 670px;
+  flex-direction: row;
+  font-size: 52px;
+  font-weight: bold;
+  color: white;
+}
+
+.numbers {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.number,
+.operator {
+  width: 120px;
+  height: 120px;
+}
+
+.number:hover, .operator:hover {
+    cursor: pointer;
+}
+
+.number {
+  display: flex;
+  background-color: blue;
+  border: 5px solid rgb(1, 1, 61);
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 20px;
+  color: white;
+  font-size: 64px;
+  font-weight: bold;
+}
+
+.operators {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.operator {
+  display: flex;
+  background-color: green;
+  border: 5px solid rgb(0, 43, 0);
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 10px;
+}
+
+.row {
+  display: flex;
+}
+
+#clear {
+    background-color: red;
+    border: 10px  ridge rgb(83, 1, 1);
+}
+
+#equal {
+    width: 550px;
+    border: 10px ridge rgb(1, 59, 1);
+    height: 80px;
+    border-radius: 20px;
+    padding: 0;
+}
+
+.pointIsHere {
+  opacity: 0.5;
+}
